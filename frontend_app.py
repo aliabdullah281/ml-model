@@ -6,7 +6,7 @@ import numpy as np
 
 # --- Configuration ---
 # Assuming your FastAPI server is running on localhost:8000
-API_URL = "http://localhost:8000/predict" 
+API_URL = "https://ml-model-bbdyddpgahpnr9amfz9odn.streamlit.app/predict" 
 # Assuming you saved the metrics in your training notebook
 METRICS = {
     "Accuracy": 0.856, # Replace with your actual value from the TPOT output
