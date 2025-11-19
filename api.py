@@ -30,7 +30,7 @@ class PredictRequest(BaseModel):
     native_country: str
 
 # 3. Define the prediction endpoint
-@app.post("/predict")
+@app.post("https://ml-model-bbdyddpgahpnr9amfz9odn.streamlit.app/predict")
 def predict_income(data: PredictRequest):
     # Convert Pydantic model data to a pandas DataFrame
     input_df = pd.DataFrame([data.model_dump()])
