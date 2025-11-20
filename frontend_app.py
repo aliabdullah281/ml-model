@@ -6,6 +6,8 @@ import numpy as np
 
 # --- Configuration ---
 # Assuming your FastAPI server is running on localhost:8000
+#API_URL = "https://ml-model-bbdyddpgahpnr9amfz9odn.streamlit.app/predict" 
+#API_URL = "http://localhost:8000/predict" 
 API_URL = "https://ml-model-bbdyddpgahpnr9amfz9odn.streamlit.app/predict" 
 # Assuming you saved the metrics in your training notebook
 METRICS = {
@@ -133,13 +135,3 @@ if st.button("Predict Income", type="primary"):
     except Exception as e:
         st.error(f"An unexpected error occurred: {e}")
 
-# --- How to Run ---
-st.markdown("---")
-st.subheader("How to Run This App")
-st.code("""
-# 1. Ensure your FastAPI backend is running:
-uvicorn api:app --reload
-
-# 2. Run this Streamlit frontend in a separate terminal:
-streamlit run frontend_app.py
-""")
